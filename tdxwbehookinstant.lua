@@ -169,6 +169,5 @@ end
 
 GameOverScreen:GetPropertyChangedSignal("Visible"):Connect(function()
     debugPrint("GameOverScreen visibility changed")
-    task.wait(1)
     task.spawn(sendWebhook)
 end)
